@@ -11,6 +11,9 @@
 
         <!-- Styles -->
         <link rel="stylesheet" href="{{ asset('css/app.css') }}">
+
+        @yield('styles')
+
         <style>
             body {
               font-family: 'Rubik', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
@@ -46,5 +49,7 @@
             {{ $slot }}
 
         </div>
+
+        @yield('scripts')
     </body>
 </html>
