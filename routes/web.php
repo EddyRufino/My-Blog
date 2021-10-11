@@ -11,7 +11,6 @@ Route::get('blog', [PostController::class, 'index'])->name('blog');
 Route::get('blog/{post:slug}', [PostController::class, 'show'])->name('post.show');
 
 // Admin Posts
-Route::get('posts/create', [AdminPostController::class, 'create'])->name('post.create');
-Route::post('posts', [AdminPostController::class, 'store'])->name('post.store');
+Route::resource('posts', AdminPostController::class)->except('show');
 
 require __DIR__.'/auth.php';
