@@ -6,7 +6,7 @@
 
     <div class="max-w-xl px-5 mt-5 w-full">
         <h1 class="text-6xl font-semibold">Editar Post</h1>
-        <form method="POST" action="{{ route('post.update', $post) }}">
+        <form method="POST" action="{{ route('posts.update', $post) }}">
             @csrf
             @method('PUT')
 
