@@ -40,6 +40,9 @@
                 top: 0%;
             }
         </style>
+
+        {{-- Alpine JS --}}
+        <script defer src="https://unpkg.com/alpinejs@3.4.2/dist/cdn.min.js"></script>
     </head>
     <body class="antialiased">
         <div class="flex items-center justify-center flex-col">
