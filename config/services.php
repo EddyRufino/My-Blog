@@ -37,4 +37,8 @@ return [
         ]
     ],
 
+    'ganalytics' => [
+        'key' => env('GANALYTICS_KEY'),
+    ],
+
 ];

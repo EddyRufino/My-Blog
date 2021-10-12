@@ -4,7 +4,7 @@
         <p class="text-xl font-light py-6">Tus publicaiones.</p>
 
         <div>
-            @foreach ($posts as $post)
+            @forelse ($posts as $post)
                 <div class="flex justify-between">
                     <a href="{{ route('post.show', $post) }}" class="text-xl font-light mb-4 inline-block">
                         {{ ucwords($post->title) }}
@@ -25,7 +25,9 @@
                         </td>
                     </div>
                 </div>
-            @endforeach
+            @empty
+                <p>¡Aparecerá algo aquí en algunos momentos!</p>
+            @endforelse
         </div>
         <div class="py-5">
             <p>{{ $posts->links() }}</p>

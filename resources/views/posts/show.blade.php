@@ -1,5 +1,9 @@
 <x-layout>
 
+@section('created_at', $post->created_at)
+@section('title', $post->title)
+@section('slug', $post->slug)
+
 @section('styles')
 <style>
     pre {
