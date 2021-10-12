@@ -10,6 +10,11 @@
         >
             BLOG
         </a>
+        <a href="#newsletters"
+            class=" border-2 border-gray-900 px-2 py-1 text-white rounded text-base inline-block font-semibold mr-1 bg-green-500"
+        >
+            SUSCRIBETE
+        </a>
     </div>
 
     @admin

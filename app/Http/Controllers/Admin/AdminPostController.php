@@ -30,7 +30,7 @@ class AdminPostController extends Controller
     {
         Post::create( $request->all() );
 
-        return back();
+        return redirect()->route('posts.index')->with('success', 'Se creo el Post.');
     }
 
     public function edit(Post $post)
@@ -42,13 +42,13 @@ class AdminPostController extends Controller
     {
         $post->update( $request->all() );
 
-        return back();
+        return redirect()->route('posts.index')->with('success', 'Se edito el Post.');
     }
 
     public function destroy(Post $post)
     {
         $post->delete();
 
-        return back();
+        return redirect()->route('posts.index')->with('success', 'Se elimino el Post.');
     }
 }

@@ -6,7 +6,7 @@
         <div>
             @foreach ($posts as $post)
                 <div class="flex justify-between">
-                    <a href="{{ route('post.show', $post) }}" class="item text-xl font-light mb-4 inline-block">
+                    <a href="{{ route('post.show', $post) }}" class="text-xl font-light mb-4 inline-block">
                         {{ ucwords($post->title) }}
                     </a>
                     <div class="flex">
