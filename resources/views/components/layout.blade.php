@@ -81,14 +81,14 @@
         </style>
 
         <!-- Google Analytics -->
-        <script async src="https://www.googletagmanager.com/gtag/js?id={{ env('GANALYTICS_KEY') }}"></script>
+{{--         <script async src="https://www.googletagmanager.com/gtag/js?id={{ env('GANALYTICS_KEY') }}"></script>
         <script>
           window.dataLayer = window.dataLayer || [];
           function gtag(){dataLayer.push(arguments);}
           gtag('js', new Date());
 
           gtag('config', '{{ env('GANALYTICS_KEY') }}');
-        </script>
+        </script> --}}
 
         {{-- Alpine JS --}}
         <script defer src="https://unpkg.com/alpinejs@3.4.2/dist/cdn.min.js"></script>

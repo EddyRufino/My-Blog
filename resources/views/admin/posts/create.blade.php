@@ -10,9 +10,9 @@
             @csrf
 
             <x-form.input name="title" placeholder="Write a title great!"/>
-            {{-- <x-form.textarea name="body" /> --}}
-            <input id="body" type="hidden" name="body">
-            <trix-editor input="body"></trix-editor>
+
+            <input id="x" type="hidden" name="body">
+            <trix-editor input="x" class="trix-content"></trix-editor>
 
             <x-form.button>Guardar</x-form.button>
 

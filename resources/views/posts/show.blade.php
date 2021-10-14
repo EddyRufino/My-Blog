@@ -33,7 +33,6 @@
     <div class="max-w-xl px-5 mt-5 w-full">
         <h1 class="text-5xl font-semibold">{{ $post->title }}</h1>
         <div class="py-6 text-xl font-light">
-            {{-- <p class="text-xl font-light py-6">{!! $post->body !!}</p> --}}
             {!! $post->body !!}
         </div>
     </div>

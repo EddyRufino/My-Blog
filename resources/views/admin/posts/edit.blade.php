@@ -12,8 +12,8 @@
 
             <x-form.input name="title" placeholder="Write a title great!" value="{{ old('title', $post->title) }}"/>
 
-            <input id="body" type="hidden" name="body" value="{{ old('body', $post->body) }}">
-            <trix-editor input="body"></trix-editor>
+            <input id="x" type="hidden" name="body" value="{{ old('body', $post->body) }}">
+            <trix-editor input="x" class="trix-content"></trix-editor>
 
             <x-form.button>Guardar</x-form.button>
 
