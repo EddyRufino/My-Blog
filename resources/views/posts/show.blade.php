@@ -9,8 +9,8 @@
     pre {
         background: rgba(31,41,55,1);
         padding: .8571429em 1.1428571em;
-        margin-top: 0;
-        margin-bottom: 0;
+        margin-top: .8rem;
+        margin-bottom: .8rem;
         border-radius: .75rem;
         color: #fff;
         font-size: 16px;
@@ -33,7 +33,7 @@
     <div class="max-w-xl px-5 mt-5 w-full">
         <h1 class="text-5xl font-semibold">{{ $post->title }}</h1>
         <div class="py-6 text-xl font-light">
-            {!! $post->body !!}
+            {!! $post->body_html !!}
         </div>
     </div>
 </x-layout>

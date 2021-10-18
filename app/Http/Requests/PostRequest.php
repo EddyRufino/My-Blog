@@ -27,6 +27,7 @@ class PostRequest extends FormRequest
             'title' => 'required',
             'slug' => 'nullable',
             'body' => 'required',
+            'body_html' => 'nullable',
             'user_id' => 'nullable',
         ];
     }

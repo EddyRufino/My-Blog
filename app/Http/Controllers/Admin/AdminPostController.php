@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Admin;
 
+use Parsedown;
 use App\Models\Post;
 use Illuminate\Http\Request;
 use App\Http\Requests\PostRequest;
@@ -28,7 +29,11 @@ class AdminPostController extends Controller
 
     public function store(PostRequest $request)
     {
-        Post::create( $request->all() );
+        $data = array_merge($request->validated(), [
+            'body_html' => (new Parsedown)->text($request->body)
+        ]);
+
+        Post::create($data);
 
         return redirect()->route('posts.index')->with('success', 'Se creo el Post.');
     }
