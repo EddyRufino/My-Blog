@@ -11,6 +11,11 @@
     .markdown-body {
         font-size: 20px;
     }
+
+    .markdown-body h1 {
+        font-size: 1.3em;
+        font-weight: 700;
+    }
 </style>
 
 @endsection

@@ -16,7 +16,7 @@ Route::get('blog/{post:slug}', [PostController::class, 'show'])->name('post.show
 
 Route::middleware('can:admin')->group( function () {
     // Admin Posts
-    Route::resource('admin/posts', AdminPostController::class)->except('show');
+    Route::resource('admin/posts', AdminPostController::class)->except(['show', 'edit', 'update']);
 });
 
 

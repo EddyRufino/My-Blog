@@ -38,22 +38,6 @@ class AdminPostController extends Controller
         return redirect()->route('posts.index')->with('success', 'Se creo el Post.');
     }
 
-    public function edit(Post $post)
-    {
-        return view('admin.posts.edit', compact('post'));
-    }
-
-    public function update(PostRequest $request, Post $post)
-    {
-        $data = $request->validated();
-
-        $data->body = GitDown::parseAndCache($request->body);
-
-        $post->update($data);
-
-        return redirect()->route('posts.index')->with('success', 'Se edito el Post.');
-    }
-
     public function destroy(Post $post)
     {
         $post->delete();

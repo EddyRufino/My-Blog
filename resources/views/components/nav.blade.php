@@ -24,12 +24,7 @@
             @keydown.escape="isOpen = false"
             class="flex items-center"
         >
-
-            <img src="http://www.gravatar.com/avatar?d=mm"
-                 alt="avatar"
-                 class="w-8 h-8 rounded-full"
-            >
-
+            Eddy
             <x-icons.arrow-down />
 
         </button>

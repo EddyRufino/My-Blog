@@ -10,9 +10,6 @@
                         {{ ucwords($post->title) }}
                     </a>
                     <div class="flex">
-                        <a href="{{ route('posts.edit', $post) }}" class="mr-2">
-                            <x-icons.edit />
-                        </a>
                         <td>
                             <form action="{{ route('posts.destroy', $post) }}" method="POST"
                                 onclick="return confirm('¿Seguro de querer eliminar la publicación?')"
