@@ -1,9 +1,4 @@
 <x-layout>
-
-@section('styles')
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/trix/1.2.3/trix.css" integrity="sha512-pTg+WiPDTz84G07BAHMkDjq5jbLS/AqY0rU/QdugnfeE0+zu0Kjz++0rrtYNK9gtzEZ33p+S53S2skXAZttrug==" crossorigin="anonymous" />
-@endsection
-
     <div class="max-w-xl px-5 mt-5 w-full">
         <h1 class="text-6xl font-semibold">Editar Post</h1>
         <form method="POST" action="{{ route('posts.update', $post) }}">
@@ -12,16 +7,22 @@
 
             <x-form.input name="title" placeholder="Write a title great!" value="{{ old('title', $post->title) }}"/>
 
-            <input id="x" type="hidden" name="body" value="{{ old('body', $post->body) }}">
-            <trix-editor input="x" class="trix-content"></trix-editor>
+{{--             <input id="x" type="hidden" name="body" value="{{ old('body', $post->body) }}">
+            <trix-editor input="x" class="trix-content"></trix-editor> --}}
+            <x-form.label name="Body" ></x-form.label>
+            <textarea name="body" id="body">{{ old('body', $post->body) }}</textarea>
 
             <x-form.button>Guardar</x-form.button>
 
         </form>
     </div>
 
-@section('scripts')
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/trix/1.2.3/trix.js" integrity="sha512-EkeUJgnk4loe2w6/w2sDdVmrFAj+znkMvAZN6sje3ffEDkxTXDiPq99JpWASW+FyriFah5HqxrXKmMiZr/2iQA==" crossorigin="anonymous" defer></script>
-@endsection
+    {{-- script and style --}}
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/simplemde/latest/simplemde.min.css">
+    <script src="https://cdn.jsdelivr.net/simplemde/latest/simplemde.min.js"></script>
+    {{-- instance --}}
+    <script>
+        var body = new SimpleMDE({ element: document.getElementById("body") });
+    </script>
 
 </x-layout>

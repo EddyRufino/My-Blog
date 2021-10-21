@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers\Admin;
 
-use Parsedown;
+use GitDown;
 use App\Models\Post;
 use Illuminate\Http\Request;
 use App\Http\Requests\PostRequest;
@@ -30,7 +30,7 @@ class AdminPostController extends Controller
     public function store(PostRequest $request)
     {
         $data = array_merge($request->validated(), [
-            'body_html' => (new Parsedown)->text($request->body)
+            'body' => GitDown::parseAndCache($request->body)
         ]);
 
         Post::create($data);
@@ -45,7 +45,11 @@ class AdminPostController extends Controller
 
     public function update(PostRequest $request, Post $post)
     {
-        $post->update( $request->all() );
+        $data = $request->validated();
+
+        $data->body = GitDown::parseAndCache($request->body);
+
+        $post->update($data);
 
         return redirect()->route('posts.index')->with('success', 'Se edito el Post.');
     }
