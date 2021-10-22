@@ -1,8 +1,6 @@
 <x-layout>
-    <div class="max-w-xl px-5 mt-5 w-full">
-        <h1 class="text-6xl font-semibold">Posts.</h1>
-        <p class="text-xl font-light py-6">Tus publicaiones.</p>
-
+    <div class="max-w-xl py-6 px-5 mt-5 w-full bg-gray-100 rounded-xl">
+        <p class="text-2xl font-bold mb-8 pb-2 border-b">Tus Posts</p>
         <div>
             @forelse ($posts as $post)
                 <div class="flex justify-between">
@@ -26,9 +24,9 @@
                 <p>¡Aparecerá algo aquí en algunos momentos!</p>
             @endforelse
         </div>
-        <div class="py-5">
-            <p>{{ $posts->links() }}</p>
-        </div>
+    </div>
+    <div class="pt-5 max-w-xl w-full">
+        {{ $posts->links() }}
     </div>
 </x-layout>
 

@@ -1,6 +1,6 @@
 <x-layout>
-    <div class="max-w-xl px-5 mt-5 w-full">
-        <h1 class="text-6xl font-semibold">Nuevo Post</h1>
+    <div class="max-w-xl py-6 px-5 mt-5 w-full bg-gray-100 rounded-xl">
+        <p class="text-2xl font-bold mb-8 pb-2 border-b">Nuevo Post</p>
         <form method="POST" action="{{ route('posts.store') }}">
             @csrf
 
