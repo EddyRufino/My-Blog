@@ -25,4 +25,9 @@
             {!! $post->body !!}
         </div>
     </div>
+
+    <x-social-media-share
+        :title="$post->title"
+        :slug="$post->slug"
+    ></x-social-media-share>
 </x-layout>
