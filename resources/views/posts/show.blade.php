@@ -4,7 +4,7 @@
 @section('title', $post->title)
 @section('slug', $post->slug)
 
-@section('styles')
+@push('styles')
     @gitdown
 
 <style>
@@ -17,8 +17,8 @@
         font-weight: 700;
     }
 </style>
+@endpush
 
-@endsection
     <div class="max-w-xl px-5 mt-5 w-full">
         <h1 class="text-5xl font-semibold">{{ $post->title }}</h1>
         <div class="py-6 text-xl font-light markdown-body">

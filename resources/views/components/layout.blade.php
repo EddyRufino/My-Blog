@@ -49,7 +49,7 @@
         <!-- Styles -->
         <link rel="stylesheet" href="{{ asset('css/app.css') }}">
 
-        @yield('styles')
+        @stack('styles')
 
         <style>
             html {
@@ -75,7 +75,7 @@
                 right: -0.1em;
                 bottom: 0;
                 transition: top 200ms cubic-bezier(0, .8, .13, 1);
-                background-color: #34D399; /*10B981*/
+                background-color: #34D399;
             }
             .item:hover:after {
                 top: 0%;
@@ -143,6 +143,6 @@
 
         <x-flash />
 
-        @yield('scripts')
+        @stack('scripts')
     </body>
 </html>

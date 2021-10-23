@@ -1,5 +1,6 @@
 @props(['title', 'slug'])
 
+@push('styles')
 <style>
     input::selection {
         background: white;
@@ -55,6 +56,7 @@
         bottom: 100%;
     }
 </style>
+@endpush
 
 <div class="max-w-xl mt-8 w-full flex px-5">
     <p class="text-xl font-light mr-3">Compartir:</p>
@@ -83,6 +85,8 @@
     </ul>
 </div>
 <input id="caja" type="text" class="boton absolute p-0 border-0 focus:ring-2 focus:ring-transparent" value="https://eddyrufino.com/blog/{{ $slug }}">
+
+@push('scripts')
 <script>
 (function() {
     let copyButton = document.querySelector('.copy #boton');
@@ -92,9 +96,9 @@
         e.preventDefault();
         let text = copyInput.select();
         document.execCommand('copy');
-        // span.innerHTML = 'Url copiada';
         tooltip.innerHTML = "Url copiada";
-        // console.log(span);
     });
 })();
 </script>
+@endpush
+
