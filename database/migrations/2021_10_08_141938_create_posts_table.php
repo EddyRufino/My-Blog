@@ -18,7 +18,7 @@ class CreatePostsTable extends Migration
             $table->string('title');
             $table->string('slug')->nullable();
             $table->text('body');
-            $table->text('body_html');
+            $table->text('body_html')->nullable();
             $table->foreignId('user_id')->constrained('users');
             $table->timestamps();
         });
